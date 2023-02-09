@@ -605,6 +605,9 @@ export class ConfigOptions {
     // Default pythonPlatform. Can be overridden by executionEnvironment.
     defaultPythonPlatform?: string;
 
+    // wokrspace indexing higher limit
+    workspaceIndexingLimitCount?: number;
+
     //---------------------------------------------------------------
     // Internal-only switches
 

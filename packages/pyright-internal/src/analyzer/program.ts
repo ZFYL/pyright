@@ -454,7 +454,7 @@ export class Program {
                 this._bindFile(sourceFileInfo);
                 const results = sourceFileInfo.sourceFile.index({ indexingForAutoImportMode: false }, token);
                 if (results) {
-                    if (++count > 2000) {
+                    if (++count > this._configOptions.workspaceIndexingLimitCount) {
                         this._console.warn(`Workspace indexing has hit its upper limit: 2000 files`);
                         return count;
                     }
